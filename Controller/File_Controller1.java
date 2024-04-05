@@ -1,6 +1,5 @@
 package Java_I_O_Stream.T2.Controller;
 
-import Java_I_O_Stream.T2.Model.File_Models;
 import Java_I_O_Stream.T2.Views.File_Views1;
 import Java_I_O_Stream.T2.Views.File_Views2;
 
@@ -17,8 +16,9 @@ public class File_Controller1 implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         String nsk = e.getActionCommand();
-        if(nsk == "Submit") {
-            File_Views2 fileViews2 = new File_Views2(fileViews1.getTextFieldTenThuMuc().getText(),fileViews1.getTextFielddDiaChiThuMuc().getText());
+        if (nsk == "Submit") {
+            File_Views2 fileViews2 = new File_Views2(fileViews1.getTextFieldTenThuMuc().getText(),
+                    fileViews1.getTextFielddDiaChiThuMuc().getText());
             this.fileViews1.dispose();
         } else if (nsk == "Exit") {
             System.exit(0);
